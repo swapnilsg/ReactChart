@@ -1,0 +1,59 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.path {
+	stroke-dasharray: 1000 1000;/*615.423095703125;*/
+	stroke-dashoffset: 1000;/*615.423095703125;*/
+	/*animation: dash 5s linear forwards;
+	-webkit-animation: dash 3s linear forwards;*/
+}
+
+.figure {
+	position:relative;
+}
+
+.revenue {
+	position:absolute;
+	top:220px;
+	left:185px;
+	font-size:60px;
+	margin:0;
+}
+
+.hours {
+	position:absolute;
+	top:220px;
+	left:440px;
+	font-size:60px;
+	margin:0;
+}
+
+.jobs {
+	position:absolute;
+	top:220px;
+	left:680px;
+	font-size:60px;
+	margin:0;
+}
