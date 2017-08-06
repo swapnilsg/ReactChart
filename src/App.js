@@ -19,6 +19,7 @@ class App extends Component {
         case 1:{temp=percentage;active='revenue';break;}
         case 2:{temp=hoursPer;active='hours';break;}
         case 3:{temp=jobsPer;active='jobs';break;}
+        case 'default':console.log("non of the above");break;
       }
       let length = index.getTotalLength();
       console.log("testtts",index,val,active);
@@ -34,11 +35,11 @@ class App extends Component {
         return;
       }
       let percentText = 100 - Math.round(parseFloat(currentPathLength)/length * 100);
-      if(active=='revenue'){
+      if(active ==='revenue'){
           this.setState({revenue:percentText});
-      }else if (active=='hours') {
+      }else if (active ==='hours') {
           this.setState({hours:percentText});
-      }else if(active=='jobs'){
+      }else if(active ==='jobs'){
         this.setState({jobs:percentText});
       }
       index.style.strokeDashoffset = currentPathLength;
@@ -55,9 +56,9 @@ class App extends Component {
           <path className="path" fill="none" stroke="#57C5EC" strokeWidth="12" strokeMiterlimit="10" d="M400,250a100,100 0 1,0 200,0a100,100 0 1,0 -200,0"/>
           <path className="path" fill="none" stroke="#EBDE1B" strokeWidth="12" strokeMiterlimit="10" d="M650,250a100,100 0 1,0 200,0a100,100 0 1,0 -200,0"/>
       	</svg>
-        <text x="0" y="15" fill="red">I love SVG!</text>
-        <text x="0" y="15" fill="red">I love SVG!</text>
-        <text x="0" y="15" fill="red">I love SVG!</text>
+        <p className="revenuehead">Revenue</p>
+        <p className="hourshead">Hours</p>
+        <p className="jobshead">Jobs</p>
       	<p className="revenue">{this.state.revenue}%</p>
         <p className="hours">{this.state.hours}%</p>
         <p className="jobs">{this.state.jobs}%</p>
@@ -70,7 +71,7 @@ class Chart extends Component {
   render(){
     return(
       <div>
-      <App revenue='60' hours='50' jobs='80'/>
+      <App revenue='70' hours='80' jobs='100'/>
       </div>
     );
   }

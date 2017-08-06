@@ -1,3 +1,5 @@
+@import "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css";
+
 .App {
   text-align: center;
 }
@@ -36,23 +38,51 @@
 
 .revenue {
 	position:absolute;
-	top:220px;
-	left:185px;
+	top:210px;
+	left:180px;
 	font-size:60px;
 	margin:0;
 }
 
 .hours {
 	position:absolute;
-	top:220px;
-	left:440px;
+	top:210px;
+	left:430px;
 	font-size:60px;
 	margin:0;
 }
 
 .jobs {
 	position:absolute;
-	top:220px;
+	top:210px;
+	left:680px;
+	font-size:60px;
+	margin:0;
+}
+
+.figure {
+	position:relative;
+}
+
+.revenuehead {
+	position:absolute;
+	top:70px;
+	left:145px;
+	font-size:60px;
+	margin:0;
+}
+
+.hourshead {
+	position:absolute;
+	top:70px;
+	left:425px;
+	font-size:60px;
+	margin:0;
+}
+
+.jobshead {
+	position:absolute;
+	top:75px;
 	left:680px;
 	font-size:60px;
 	margin:0;
