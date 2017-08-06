@@ -22,17 +22,23 @@ class App extends Component {
       // Set up the starting positions
       index.style.strokeDasharray = length + ' ' + length;
       index.style.strokeDashoffset = length * (1 - percentage);
-      let currentPathLength = length;
-      setInterval(()=>{
-        if (currentPathLength <= length * (1 - percentage)) {
-           clearInterval();
-        return;
-      }
-      let percentText = 100 - Math.round(parseFloat(currentPathLength)/length * 100);
-      index.style.strokeDashoffset = currentPathLength;
-      currentPathLength -= 2;
-      this.setState({revenue:percentText});
-    });
+
+      index.getBoundingClientRect();
+
+      index.style.transition = index.style.WebkitTransition ='stroke-dashoffset 5s ease-in-out';
+
+      index.style.strokeDashoffset = '0';
+      //let currentPathLength = length;
+    //   setInterval(()=>{
+    //     if (currentPathLength <= length * (1 - percentage)) {
+    //        clearInterval();
+    //     return;
+    //   }
+    //   let percentText = 100 - Math.round(parseFloat(currentPathLength)/length * 100);
+    //   index.style.strokeDashoffset = currentPathLength;
+    //   currentPathLength -= 2;
+    //   this.setState({revenue:percentText});
+    // });
     });
   }
   render() {
