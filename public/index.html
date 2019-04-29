@@ -26,6 +26,7 @@
       You need to enable JavaScript to run this app.
     </noscript>
     <div id="root"></div>
+    <div id="editor"></div>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
@@ -37,4 +38,24 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
   </body>
+
+  <script>
+    (function () {
+        window.rfsdk = window.rfsdk || function () {
+            (window.rfsdk.q = window.rfsdk.q || []).push(arguments);
+        };
+        var s = document.createElement('script');
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = 'https://pareshchouhan.github.io/test_rocketium/rfsdk.min.js';
+        var x = document.getElementsByTagName('script')[0];
+        x.parentNode.insertBefore(s, x);
+    })();
+    window.rfsdk('init', {
+        workspaceId: '5c7e3b60ff9fa74d863a74e3', // can be obtained by contacting customer support
+        templateId: '5c6d28e90783db785ca7532b', // can be obtained by contacting customer support
+        clientId: '5caf09cef3c1e34cfd2e8d20', // can be obtained by contacting customer support
+        appendTo:  'editor' // id of element you want to append the form to.
+    });
+</script>
 </html>
